@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Husband ❤️</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #fff5f7;
+            padding: 80px 20px;
+            transition: 0.5s;
+        }
+
+        .card {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        #message {
+            font-size: 20px;
+            min-height: 60px;
+            margin: 30px 0;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+            padding: 14px 22px;
+            margin: 6px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        .heart {
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">❤️</div>
+
+    <h1>Hi Golu 👀</h1>
+
+    <p>I coded something for you.</p>
+
+    <div id="message">
+        Pick a button 😌
+    </div>
+
+    <button onclick="compliment()">Compliment Me</button>
+
+    <button onclick="love()">How Much Do I Love You?</button>
+
+    <button onclick="surprise()">DO NOT CLICK</button>
+
+</div>
+
+<script>
+
+function compliment() {
+
+    const messages = [
+        "You're very handsome btw 😌",
+        "10/10 husband. Would marry again.",
+        "You're my favourite person ❤️",
+        "Life is better with you in it.",
+        "You're lucky your wife knows HTML now 😎"
+    ];
+
+    const random =
+        messages[Math.floor(Math.random() * messages.length)];
+
+    document.getElementById("message").innerText = random;
+}
+
+
+function love() {
+
+    document.getElementById("message").innerText =
+    "Calculating love... ♡";
+
+    setTimeout(function() {
+
+        document.getElementById("message").innerText =
+        "RESULT: ∞% ❤️";
+
+    }, 1500);
+
+}
+
+
+function surprise() {
+
+    document.body.style.background = "#ffccd5";
+
+    document.getElementById("message").innerHTML =
+    "YOU WERE TOLD NOT TO CLICK 😭<br><br>But since you're here...<br><b>I LOVE YOU ❤️</b>";
+
+}
+
+</script>
+
+</body>
+</html>
